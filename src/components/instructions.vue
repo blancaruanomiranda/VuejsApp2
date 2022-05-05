@@ -10,7 +10,7 @@
             </p>
         </div>
         <div v-if="chapter_counter==1">
-            <p>En este juego vas a participar en una historia. A medida que vayas avanzando, deberás tomar varias decisiones que afectarán al protagonista de la historia. En cada capítulo, se te mostrarán dos opciones y deberás hacer click en la que creas que es mejor, así de simple.</p>
+            <p>En este juego vas a participar en una historia. A medida que vayas avanzando, deberás tomar varias decisiones que afectarán al protagonista de la historia. En cada capítulo, se te mostrarán dos opciones y deberás hacer click en la que creas que es mejor, así de simple. </p>
         </div>
     </div>
 </template>

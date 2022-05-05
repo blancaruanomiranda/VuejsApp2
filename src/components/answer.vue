@@ -9,22 +9,43 @@
             <p v-if="items[chapter_counter-1].point==1" id="answer_text"><ion-icon name="checkmark-outline"></ion-icon></p>
             <p v-if="items[chapter_counter-1].point==0" id="answer_text"><ion-icon name="close-outline"></ion-icon></p>
         </div>
+        <div class="barra_container">
+            <div class="stalker-icon">
+                <img src="@/components/static/img/stalker_icon.png"/>
+            </div>
+            <div class="barra">
+                <div :style="barWidthCalculated"></div>
+            </div>
+            <div class="jimmy-icon">
+                <img src="@/components/static/img/timmy_icon.png" />
+            </div>
+        </div>
+        
         
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     </div>
 </template>
 
 <script>
+    //const progreso = document.querySelector(".barra div")
+    //progreso.setAttribute("style", "width: 60%");
     
     export default {
         
         name: 'answer',
+        computed: {
+            barWidthCalculated: function () {
+                return {
+                    width: (this.progreso) + '%'
+                };
+            }
+        },
 
         props: {
             counter: Number,
             chapter_counter: Number,
-            value: Number,
-            
+            points: Number,
+            progreso: Number
             
          
         },
@@ -34,7 +55,7 @@
                 items: [
                     {
                         message: 'Son las 11 de la mañana de un viernes. Es la hora del patio. Jimmy y sus amigos se sientan en las gradas, como siempre, mientras se comen sus bocatas. Hoy es un día especial: los padres de Jimmy por fin le dejan hacerse un perfil en las redes sociales. Los amigos de Jimmy le explican que lo primero que tienes que hacer al crearte un perfil es escoger el nombre de usuario, la foto de perfil y añadir una pequeña biografía para que la gente te pueda conocer un poco más. ',
-                        answer1: '¡Cuidado! Compartir información tan personal en las redes puede ser peligroso. Quizás debería haber escogido la otra opción.',
+                        answer1: '¡Cuidado! Compartir información tan personal en las redes puede ser peligroso. Ahora el acosador sabe a qué instituto va Jimmy. Quizás debería haber escogido la otra opción.',
                         point: 0
                     },
                     {
@@ -54,7 +75,7 @@
                     },
                     {
                         message: 'Se acercan los exámenes finales. Jimmy decide aprovechar todo el finde para estudiar. Las primeras tres horas son bastante productivas y Jimmy está a tope estudiando mates, pero al final acaba con la cabeza como un bombo. Jimmy coge el móvil y le hace una foto a sus apuntes, para compartir el sufrimiento con sus seguidores.',
-                        answer1: '¡Genial! Un poco de postureo nunca viene mal.',
+                        answer1: '¡Genial! Un poco de postureo nunca viene mal. No sé si te habrás fijado, pero en la otra opción se veía en una esquina el DNI de Jimmy. A veces podemos subir algo que no toca sin darnos cuenta.¡Menos mal que has escogido bien!',
                         point: 1
                     },
                     {
@@ -84,7 +105,7 @@
     }
 
     h1 {
-        margin-top: 8vh;
+        margin-top: 5vh;
         margin-left: 6vw;
         font-size: 30px;
         color: #9f00eb;
@@ -117,5 +138,43 @@
         color: #00fff0;
         background: transparent;
     }
+
+    .barra_container {
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        height: 8vh;
+        overflow: hidden;
+    }
+    .jimmy-icon {
+        transform: scale(0.4);
+        background: transparent;
+    }
+    .stalker-icon {
+        transform: scale(0.4);
+        background: transparent;
+    }
+    .barra_container img {
+        background: transparent;
+    }
+    .barra {
+        width: 250px;
+        height: 16px;
+        margin: auto;
+        border-radius: 10px;
+        border: 1px solid #9f00eb;
+        background-color: red;
+        color: red;
+    }
+
+        .barra div {
+            
+            border-radius: 10px;
+            
+            border: 8px solid #9f00eb;
+        }
+        
    
 </style>

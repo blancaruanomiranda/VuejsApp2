@@ -1,10 +1,13 @@
 <template>
     <div class="home">
         
-        <h1 >¡BIENVENIDO A SOCIALESCAPE!</h1>
-       
-        <h2> AYUDA A JIMMY A ESCAPAR DEL ACOSADOR </h2>   
+        
+        <h1>¡BIENVENIDO A SOCIALESCAPE!</h1>
+        <h2> AYUDA A JIMMY A ESCAPAR DEL ACOSADOR </h2>
+
         <img src="@/components/static/img/timmy.png" />
+        
+
     </div>
 </template>
 
@@ -36,23 +39,33 @@
     }
 
     h1 {
-        margin-top: 15vh;
-        margin-left: 7vw;
-        
+        margin-top: 10vh;
+        text-align: center;
         line-height: 40px;
         justify-content: left;
         font-size: 40px;
         color: #e300ff;
         font-family: 'Press Start 2P', cursive;
         padding: 20px;
+        
     }
+    
+    
+    
+        
+
+
+
+
+ 
 
     h2 {
         font-size: 20px;
-        margin-left: 8vw;
+        text-align: center;
+        margin: auto;
         padding: 10px;
         width: 40%;
-        margin-block-start: 70px;
+        margin-block-start: 3vh;
         color: #9f00eb;
         font-family: 'Press Start 2P', cursive;
         line-height: 30px;
@@ -61,14 +74,22 @@
    
 
     img {
+        
         position: fixed;
-        right: 50px;
-        bottom: 50px;
-        height: 50%;
-        width: 35%;
+        display: block;
+        right: 7vw;
+        bottom: 5vw;
+        opacity: 70%;
+        width: 25%;
     }
 
-   
+    
+
+
+
+    
+
+        
 
   
 

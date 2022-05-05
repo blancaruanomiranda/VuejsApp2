@@ -1,7 +1,8 @@
 <template>
     <div class="evaluation">
-        
-        <p>TEST SECTION</p>
+
+        <p>Entra en este link para contestar el test</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZHZV_2BNeOzCIPn6C6TEgY_sSGiQjv3mHRwn3qB7iZjS4EA/viewform?usp=sf_link">Link al test</a>
 
     </div>
 </template>
@@ -35,9 +36,13 @@
     p {
         font-size: 15px;
         text-align: center;
-        margin-top: 100px;
-        margin-bottom: 30px;
+        margin-top: 30vh;
         padding: 20px;
         color: white;
+    }
+    a {
+        justify-content: center;
+        display: flex;
+        margin-bottom: 6vh;
     }
 </style>

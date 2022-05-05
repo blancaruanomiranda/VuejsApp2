@@ -72,17 +72,22 @@
     <Content Include="src\components\static\img\img2_A.jpeg" />
     <Content Include="src\components\static\img\img2_B.jpeg" />
     <Content Include="src\components\static\img\img3_A.jpeg" />
+    <Content Include="src\components\static\img\img3_A.jpg" />
     <Content Include="src\components\static\img\img3_B.jpeg" />
+    <Content Include="src\components\static\img\img3_B.jpg" />
     <Content Include="src\components\static\img\img4_A.jpeg" />
     <Content Include="src\components\static\img\img4_B.jpeg" />
     <Content Include="src\components\static\img\img5_A.jpeg" />
     <Content Include="src\components\static\img\img5_B.jpeg" />
+    <Content Include="src\components\static\img\img5_B.jpg" />
     <Content Include="src\components\static\img\img_left_2.jpg" />
     <Content Include="src\components\static\img\img_right_2.jpg" />
     <Content Include="src\components\static\img\inicio_black.png" />
     <Content Include="src\components\static\img\outline_arrow_right_alt_black_24dp.png" />
     <Content Include="src\components\static\img\stalker.png" />
+    <Content Include="src\components\static\img\stalker_icon.png" />
     <Content Include="src\components\static\img\timmy.png" />
+    <Content Include="src\components\static\img\timmy_icon.png" />
     <Content Include="src\components\tips.vue" />
     <Content Include="src\main.js" />
   </ItemGroup>

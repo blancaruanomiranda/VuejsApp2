@@ -14,10 +14,10 @@
 
         <div class="image-wrapper" v-if="chapter_counter==1">
             <div class="column">
-                <img id="OPT1" src="@/components/static/img/img1_A.jpg" style="width:50%" />
+                <img id="imgOPT1" src="@/components/static/img/img1_A.jpg" style="width:50%" />
             </div>
             <div class="column">
-                <img id="OPT2" src="@/components/static/img/img1_B.jpg" style="width:50%" />
+                <img id="imgOPT2" src="@/components/static/img/img1_B.jpg" style="width:50%" />
             </div>
         </div>
         <div class="image-wrapper2" v-if="chapter_counter==2">
@@ -30,18 +30,18 @@
         </div>
         <div class="image-wrapper2" v-if="chapter_counter==3">
             <div class="column2">
-                <img id="OPT1-2" src="@/components/static/img/img3_A.jpeg" style="width:50%" />
+                <img id="OPT1-2" src="@/components/static/img/img3_A.jpg" style="width:50%" />
             </div>
             <div class="column2">
-                <img id="OPT2-2" src="@/components/static/img/img3_B.jpeg" style="width:50%" />
+                <img id="OPT2-2" src="@/components/static/img/img3_B.jpg" style="width:50%" />
             </div>
         </div>
         <div class="image-wrapper" v-if="chapter_counter==4">
             <div class="column">
-                <img id="OPT1" src="@/components/static/img/img4_A.jpeg" style="width:55%" />
+                <img id="imgOPT1" src="@/components/static/img/img4_A.jpeg" style="width:55%" />
             </div>
             <div class="column">
-                <img id="OPT2" src="@/components/static/img/img4_B.jpeg" style="width:60%" />
+                <img id="imgOPT2" src="@/components/static/img/img4_B.jpeg" style="width:60%" />
             </div>
         </div>
         <div class="image-wrapper2" v-if="chapter_counter==5">
@@ -49,7 +49,7 @@
                 <img id="OPT1-2" src="@/components/static/img/img5_A.jpeg" style="width:50%" />
             </div>
             <div class="column2">
-                <img id="OPT2-2" src="@/components/static/img/img5_B.jpeg" style="width:50%" />
+                <img id="OPT2-2" src="@/components/static/img/img5_B.jpg" style="width:50%" />
             </div>
         </div>
         <div v-if="chapter_counter==6">
@@ -60,15 +60,15 @@
 
             <div class="column">
                 <p id="textA">Jimmy no tiene ni idea de quién es este tío. Nunca ha jugado a baloncesto con un tal David. Aún así, le pica la curiosidad y le pasa el email y el número para averiguarlo.</p>
-               
+
             </div>
             <div class="column">
                 <p id="textB">Jimmy no lo duda ni un segundo y bloquea al usuario. Sabe que nunca ha jugado a baloncesto con ningún David, así que chao. </p>
             </div>
         </div>
 
-
         
+
 
 
     </div>
@@ -128,11 +128,11 @@
         margin:0;
     }
     .component2{
-        display:grid;
+       
         margin:0px;
     }
     h1 {
-        margin-top: 8vh;
+        margin-top: 5vh;
         margin-left: 6vw;
         font-size: 30px;
         color: #9f00eb;
@@ -158,16 +158,17 @@
         padding: 5px;
         text-align: center;
     }
-    #OPT1{
+    #imgOPT1{
         margin-left: 18vw;
-        margin-bottom: 4vh;
+        
     }
-    #OPT2 {
+    #imgOPT2 {
         margin-right: 18vw;
-        margin-bottom: 4vh;
+       
     }
     .image-wrapper2 {
         display: flex;
+        
     }
     .column2 {
         flex: 50%;
@@ -176,12 +177,12 @@
     }
     #OPT1-2 {
         margin-left: 18vw;
-        margin-bottom: 4vh;
+        
     }
 
     #OPT2-2 {
         margin-right: 18vw;
-        margin-bottom: 4vh;
+        
     }
 
     
@@ -209,6 +210,7 @@
     #normal{
 
     }
+    
     
    
 

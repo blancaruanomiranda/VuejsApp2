@@ -9,6 +9,17 @@
             <p v-if="items[chapter_counter-1].point==1" id="answer_text"><ion-icon name="checkmark-outline"></ion-icon></p>
             <p v-if="items[chapter_counter-1].point==0" id="answer_text"><ion-icon name="close-outline"></ion-icon></p>
         </div>
+        <div class="barra_container">
+            <div class="stalker-icon">
+                <img src="@/components/static/img/stalker_icon.png" />
+            </div>
+            <div class="barra">
+                <div :style="barWidthCalculated"></div>
+            </div>
+            <div class="jimmy-icon">
+                <img src="@/components/static/img/timmy_icon.png" />
+            </div>
+        </div>
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
@@ -19,10 +30,17 @@
 
     export default {
         name: 'answer2',
-
+        computed: {
+            barWidthCalculated: function () {
+                return {
+                    width: (this.progreso) + '%'
+                };
+            }
+        },
         props: {
             counter: Number,
-            chapter_counter: Number
+            chapter_counter: Number,
+            progreso: Number
         },
         data() {
             return {
@@ -75,7 +93,7 @@
     }
 
     h1 {
-        margin-top: 8vh;
+        margin-top: 5vh;
         margin-left: 6vw;
         font-size: 30px;
         color: #9f00eb;
@@ -110,4 +128,42 @@
         color: #00fff0;
         background: transparent;
     }
+    .barra_container {
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        height: 8vh;
+        overflow: hidden;
+    }
+
+    .jimmy-icon {
+        transform: scale(0.4);
+        background: transparent;
+    }
+
+    .stalker-icon {
+        transform: scale(0.4);
+        background: transparent;
+    }
+
+    .barra_container img {
+        background: transparent;
+    }
+    .barra {
+        width: 250px;
+        height: 16px;
+        margin: auto;
+        border-radius: 10px;
+        border: 1px solid #9f00eb;
+        background-color: red;
+        color: red;
+    }
+
+        .barra div {
+            
+            border-radius: 10px;
+            border: 8px solid #9f00eb;
+        }
 </style>

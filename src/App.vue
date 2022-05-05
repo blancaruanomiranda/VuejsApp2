@@ -5,10 +5,12 @@
 
         <meta charset="UTF-8" />
 
-        <component :is="component" v-bind="{ counter: this.counter, chapter_counter: this.chapter_counter, f_counter: this.f_counter, points: this.points}"></component>
-        <button class="start_button" v-if="component == 'Home'" v-on:click="component='instructions'; counter++; chapter_counter++">EMPEZAR </button>
-        <button class="start_button" v-if="component == 'Home'" v-on:click="component='final_menu'; counter++"> IR AL MENÚ </button>
-        <button class="start_button" v-if="component == 'Home'" v-on:click="component='component1'; counter++; chapter_counter=7"> CAPI 7</button>
+        <component :is="component" v-bind="{ counter: this.counter, chapter_counter: this.chapter_counter, f_counter: this.f_counter, points: this.points, progreso: this.progreso}"></component>
+        <button class="start_button" id="empezar" v-if="component == 'Home'" v-on:click="component='questionnaire'; counter++; chapter_counter++">EMPEZAR </button>
+        <button class="start_button" v-if="component == 'Home'" v-on:click="component='final_menu'; counter++"> MENÚ </button>
+        <button id="arrow_button" v-if="component == 'questionnaire'" v-on:click="component='instructions'; counter++">
+            <span class="icono-flecha"><ion-icon name="arrow-forward-outline"></ion-icon> </span>
+        </button>
         <button class="opacity_animation" id="got_button" v-if="component == 'instructions' && chapter_counter==1" v-on:click="component='instructions2'; counter++"> VALE PERO, DE QUÉ VA LA HISTORIA? </button>
         <button class="opacity_animation" id="got_button" v-if="component == 'instructions2'" v-on:click="component='component1'; counter++"> DALE BRO </button>
         <button id="arrow_button" v-if="component == 'component1' && chapter_counter<7" v-on:click="component='component2'; counter++">
@@ -43,7 +45,7 @@
         <button id="got_button" v-if="component == 'feedback' && f_counter == 3" v-on:click="component='final_menu'; counter++"> IR AL MENÚ </button>
         <button id="menu_button" v-if="component == 'final_menu'" v-on:click="component='evaluation'; counter++">EVALUACIÓN</button>
         <button id="menu_button" v-if="component == 'final_menu'" v-on:click="component='tips'; counter++"> CONSEJITOS </button>
-        <button id="menu_button" v-if="component == 'final_menu'" v-on:click="component='Home'; counter=0; chapter_counter =0; points=0; f_counter=0"> VOLVER A JUGAR </button>
+        <button id="menu_button" v-if="component == 'final_menu'" v-on:click="component='Home'; counter=0; chapter_counter =0; points=0; f_counter=0; progreso = 50"> VOLVER A JUGAR </button>
         <button id="got_button" v-if="component == 'tips'" v-on:click="component='final_menu'; counter++"> VOLVER </button>
         <button id="got_button" v-if="component == 'evaluation'" v-on:click="component='final_menu'; counter++"> VOLVER </button>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -54,6 +56,7 @@
 
 <script>
     import Home from './components/Home.vue';
+    import questionnaire from './components/prequestionnaire.vue';
     import component1 from './components/component1.vue';
     import component2 from './components/component2.vue';
     import instructions from './components/instructions.vue';
@@ -81,7 +84,8 @@
             'tips': tips,
             'evaluation': evaluation,
             'feedback': feedback,
-            'priv': priv
+            'priv': priv,
+            'questionnaire': questionnaire
         },
         data() {
             return {
@@ -92,15 +96,29 @@
                 points: 0,
                 component: 'Home',
                 a: [0, 1, 1, 0, 1, 0],
-                a2: [1, 0, 0, 1, 0, 1]
+                a2: [1, 0, 0, 1, 0, 1],
+                progreso: 50
             }
         },
         methods: {
             sumPoints1: function () {
-                this.points += this.a[this.chapter_counter-1];
+                this.points += this.a[this.chapter_counter - 1];
+                if (this.a[this.chapter_counter - 1] == 0) {
+                    this.progreso -= (100 / 12);
+                }
+                if (this.a[this.chapter_counter - 1] == 1) {
+                    this.progreso += (100 / 12);
+                }
+                    
             },
             sumPoints2: function () {
                 this.points += this.a2[this.chapter_counter - 1];
+                if (this.a2[this.chapter_counter - 1] == 0) {
+                    this.progreso -= (100 / 12);
+                }
+                if (this.a2[this.chapter_counter - 1] == 1) {
+                    this.progreso += (100 / 12);
+                }
             },
             delayRedirect: function () {
                 setTimeout(() => {
@@ -197,16 +215,22 @@
         text-align: center;
     }
     .start_button {
-        margin-left:8vw;
-        margin-top:12vh;
-        position: relative;
-       
+        display: block;
+        margin: auto;
+        margin-bottom: 5vh;
+        width: 140px;
+        text-align: center;
     }
+    #empezar{
+        margin-top: 15vh;
+    }
+    
+    
        
     #arrow_button {
         display: block;
         margin: auto;
-        margin-top: 20px;
+        margin-top: 5vh;
         border: 1px solid mediumpurple;
         width: 120px;
        
@@ -246,7 +270,9 @@
 
     .btn-option {
         display: flex;
+        height: 15vh;
     }
+    
     .button-column {
         flex: 50%;
         padding: 5px;
@@ -254,11 +280,18 @@
     }
     .btn-option #OPT1 {
         margin-left: 18vw;
+        margin-top: 2vh;
         
     }
+    #OPT1:hover, #OPT2:hover {
+        background: mediumpurple;
+        color: black;
+        box-shadow: 0 0 5px mediumpurple, 0 0 10px mediumpurple, 0 0 15px mediumpurple, 0 0 20px mediumpurple;
+    }
+
     .btn-option #OPT2 {
         margin-right: 18vw;
-       
+        margin-top: 2vh;
     }
 
     @keyframes latidos {
