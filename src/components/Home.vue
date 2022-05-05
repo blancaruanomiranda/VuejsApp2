@@ -79,7 +79,6 @@
         display: block;
         right: 7vw;
         bottom: 5vw;
-        opacity: 70%;
         width: 25%;
     }
 
@@ -88,7 +87,6 @@
         display: block;
         left: 7vw;
         bottom: 5vw;
-        opacity: 70%;
         width: 25%;
         background: transparent;
     }
