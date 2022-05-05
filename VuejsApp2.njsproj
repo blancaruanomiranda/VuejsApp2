@@ -59,6 +59,7 @@
     <Content Include="src\components\instructions.vue" />
     <Content Include="src\components\instructions2.vue" />
     <Content Include="src\components\menu.vue" />
+    <Content Include="src\components\prequestionnaire.vue" />
     <Content Include="src\components\private.vue" />
     <Content Include="src\components\static\img\arrow-27324_1280.png" />
     <Content Include="src\components\static\img\f1.png" />

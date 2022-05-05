@@ -1,12 +1,12 @@
 <template>
     <div class="home">
-        
-        
+
+
         <h1>¡BIENVENIDO A SOCIALESCAPE!</h1>
         <h2> AYUDA A JIMMY A ESCAPAR DEL ACOSADOR </h2>
+        <img id="left" src="@/components/static/img/timmy.png" />
+        <img id="right" src="@/components/static/img/timmy.png" />
 
-        <img src="@/components/static/img/timmy.png" />
-        
 
     </div>
 </template>
@@ -73,7 +73,7 @@
 
    
 
-    img {
+    #right {
         
         position: fixed;
         display: block;
@@ -83,6 +83,15 @@
         width: 25%;
     }
 
+    #left {
+        position: fixed;
+        display: block;
+        left: 7vw;
+        bottom: 5vw;
+        opacity: 70%;
+        width: 25%;
+        background: transparent;
+    }
     
 
 
