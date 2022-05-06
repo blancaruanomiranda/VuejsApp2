@@ -10,6 +10,7 @@
             <img id="img2" v-if="f_counter==1 && points>3 && points<=5" src="@/components/static/img/f2.jpg" />
             <p class="c" v-if="f_counter==1 && points>5">{{items[f_counter-1].message5}}</p>
             <img id="img3" v-if="f_counter==1 && points>5" src="@/components/static/img/f3.jpg" />
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZHZV_2BNeOzCIPn6C6TEgY_sSGiQjv3mHRwn3qB7iZjS4EA/viewform?usp=sf_link" target="_blank">Link al test</a>
 
 
         </div>
@@ -40,7 +41,7 @@
                         message2: 'La huella digital son los rastros que dejan todas esas cosas que hacemos en internet. Nuestra huella digital está formada por los sitios web que visitamos, las fotos que publicamos y todos los comentarios o mensajes que mandamos, entre otras cosas. El objetivo de este juego es que veas cómo te pueden afectar tu huella digital  y aprendas de los errores de Jimmy a la hora de publicar cosas en las redes sociales.'
                     },
                     {
-                        message1: 'Por último, me gustaría pedirte que vayas al apartado de evaluación que encontrarás en el menú y completes un pequeño test (se hace súper rápido, lo prometo jeje) y si quieres, visites la sección de consejitos para ver algunas cosillas que puedes hacer para cuidar tu huella digital. También puedes volver a jugar si te apetece.',
+                        message1: 'Por último, me gustaría pedirte que vayas al apartado de evaluación que encontrarás en el menú (o si lo prefieres puedes clicar en el link que hay aquí abajo directamente) y completes un pequeño test (se hace súper rápido, lo prometo jeje) y si quieres, visites la sección de consejitos para ver algunas cosillas que puedes hacer para cuidar tu huella digital. También puedes volver a jugar si te apetece.',
                         message2: '¡Gracias por cuidar de Jimmy!'
                     }
                 ]
@@ -114,6 +115,13 @@
         display: block;
         margin: auto;
         width: 15%;
+    }
+
+    a {
+        justify-content: center;
+        display: flex;
+        margin-bottom: 6vh;
+        margin-top: 2vh;
     }
 
 </style>

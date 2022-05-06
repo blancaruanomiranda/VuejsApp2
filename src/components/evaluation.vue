@@ -2,7 +2,7 @@
     <div class="evaluation">
 
         <p>Entra en este link para contestar el test</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZHZV_2BNeOzCIPn6C6TEgY_sSGiQjv3mHRwn3qB7iZjS4EA/viewform?usp=sf_link">Link al test</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZHZV_2BNeOzCIPn6C6TEgY_sSGiQjv3mHRwn3qB7iZjS4EA/viewform?usp=sf_link" target="_blank">Link al test</a>
 
     </div>
 </template>

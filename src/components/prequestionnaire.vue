@@ -2,7 +2,7 @@
     <div class="questionnaire">
 
         <p>Antes de empezar a jugar, necesito que contestes unas preguntitas. Por favor, clica en el siguiente link y rellena el formulario. </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjf_W24OII6NEdVNroXMsE6DaUUE2F_b-MrcJ4PIZvge1nLQ/viewform?usp=sf_link">Link al test</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjf_W24OII6NEdVNroXMsE6DaUUE2F_b-MrcJ4PIZvge1nLQ/viewform?usp=sf_link" target="_blank">Link al test</a>
 
     </div>
 </template>
