@@ -10,7 +10,7 @@
             <img id="img2" v-if="f_counter==1 && points>3 && points<=5" src="@/components/static/img/f2.jpg" />
             <p class="c" v-if="f_counter==1 && points>5">{{items[f_counter-1].message5}}</p>
             <img id="img3" v-if="f_counter==1 && points>5" src="@/components/static/img/f3.jpg" />
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZHZV_2BNeOzCIPn6C6TEgY_sSGiQjv3mHRwn3qB7iZjS4EA/viewform?usp=sf_link" target="_blank">Link al test</a>
+            <a v-if="f_counter==3" href="https://docs.google.com/forms/d/e/1FAIpQLSeZHZV_2BNeOzCIPn6C6TEgY_sSGiQjv3mHRwn3qB7iZjS4EA/viewform?usp=sf_link" target="_blank">Link al test</a>
 
 
         </div>
