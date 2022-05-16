@@ -6,11 +6,8 @@
         <meta charset="UTF-8" />
 
         <component :is="component" v-bind="{ counter: this.counter, chapter_counter: this.chapter_counter, f_counter: this.f_counter, points: this.points, progreso: this.progreso}"></component>
-        <button class="start_button" id="empezar" v-if="component == 'Home'" v-on:click="component='questionnaire'; counter++; chapter_counter++">EMPEZAR </button>
+        <button class="start_button" id="empezar" v-if="component == 'Home'" v-on:click="component='instructions'; counter++; chapter_counter++">EMPEZAR </button>
         <button class="start_button" v-if="component == 'Home'" v-on:click="component='final_menu'; counter++"> MENÚ </button>
-        <button id="arrow_button" v-if="component == 'questionnaire'" v-on:click="component='instructions'; counter++">
-            <span class="icono-flecha"><ion-icon name="arrow-forward-outline"></ion-icon> </span>
-        </button>
         <button class="opacity_animation" id="got_button" v-if="component == 'instructions' && chapter_counter==1" v-on:click="component='instructions2'; counter++"> VALE PERO, DE QUÉ VA LA HISTORIA? </button>
         <button class="opacity_animation" id="got_button" v-if="component == 'instructions2'" v-on:click="component='component1'; counter++"> DALE BRO </button>
         <button id="arrow_button" v-if="component == 'component1' && chapter_counter<7" v-on:click="component='component2'; counter++">
@@ -28,19 +25,23 @@
             </div>
         </div>
         <button class="corazon" id="got_button" v-if="component == 'instructions' && chapter_counter==7" v-on:click="component='priv'; counter++"> VAMOS A SOLUCIONAR ESTO </button>
-        
+
         <div class="container" v-if="component == 'priv'">
             <h3>Poner perfil privado</h3>
             <label class="switch">
-                <input type="checkbox" @click="delayRedirect(); counter++; f_counter++"/>
-                    <span class="slider"></span>
+                <input type="checkbox" @click="delayRedirect(); counter++; f_counter++" />
+                <span class="slider"></span>
             </label>
         </div>
         <button id="arrow_button" v-if="component == 'answer' | component == 'answer2' && chapter_counter < 7" v-on:click="component='component1'; counter++; chapter_counter++">
             <span class="icono-flecha"><ion-icon name="arrow-forward-outline"></ion-icon> </span>
         </button>
-        <button id="arrow_button" v-if="component == 'feedback' && f_counter < 3" v-on:click="component='feedback'; counter++; f_counter++">
+        <button id="arrow_button" v-if="component == 'feedback' && f_counter == 1" v-on:click="component='feedback'; counter++; f_counter++">
             <span class="icono-flecha"><ion-icon name="arrow-forward-outline"></ion-icon> </span>
+        </button>
+        <button id="arrow_button" v-if="component == 'feedback' && f_counter == 2" v-on:click="component='feedback'; counter++; f_counter++">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZHZV_2BNeOzCIPn6C6TEgY_sSGiQjv3mHRwn3qB7iZjS4EA/viewform?usp=sf_link" target="_blank">Link al test</a>
+
         </button>
         <button id="got_button" v-if="component == 'feedback' && f_counter == 3" v-on:click="component='final_menu'; counter++"> IR AL MENÚ </button>
         <button id="menu_button" v-if="component == 'final_menu'" v-on:click="component='evaluation'; counter++">EVALUACIÓN</button>
