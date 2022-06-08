@@ -1,29 +1,25 @@
 <template>
     <div class="home">
-
-
         <h1>¡BIENVENIDO A SOCIALESCAPE!</h1>
         <h2> AYUDA A JIMMY A ESCAPAR DEL ACOSADOR </h2>
         <img src="@/components/static/img/timmy.png" />
-
-
     </div>
 </template>
 
 <script>
-       export default {
+    export default {
         name: 'Home',
         props: {
             msg: String
-        }
-       
-        
+        }  
     };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     * {
         padding: 0;
         margin: 0;
@@ -33,8 +29,7 @@
         padding: 0;
         margin: 0;
         background-color: black;
-        background-size: 100% 100%;
-        
+        background-size: 100% 100%;       
     }
 
     h1 {
@@ -45,18 +40,8 @@
         font-size: 40px;
         color: #e300ff;
         font-family: 'Press Start 2P', cursive;
-        padding: 20px;
-        
+        padding: 20px;       
     }
-    
-    
-    
-        
-
-
-
-
- 
 
     h2 {
         font-size: 20px;
@@ -70,26 +55,13 @@
         line-height: 30px;
     }
 
-   
-
-    img {
-        
+    img {       
         position: fixed;
         display: block;
         right: 7vw;
         bottom: 5vw;
         width: 25%;
     }
-
-  
-
-
-
-    
-
-        
-
-  
 
 </style>
 

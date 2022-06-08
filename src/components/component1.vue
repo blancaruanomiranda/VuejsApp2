@@ -1,6 +1,5 @@
 <template>
     <div class="c1">
-        
         <h1>CAPÍTULO {{chapter_counter}}</h1>
     </div>
 </template>
@@ -16,15 +15,16 @@
 </script>
 
 <style scoped>
+
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     * {
         padding: 0;
         margin: 0;
         background-color: black;
-        background-size: 100% 100%;
-        
-       
+        background-size: 100% 100%;   
     }
+
     h1 {
         color: #e300ff;
         text-align: center;
@@ -34,5 +34,4 @@
         font-family: 'Press Start 2P', cursive;
     }
 
-    
 </style>

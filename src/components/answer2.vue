@@ -2,13 +2,14 @@
     <div class="answer2">
 
         <h1>CAPÍTULO {{chapter_counter}}</h1>
-
         <p id="text"> {{items[chapter_counter-1].message}}</p>
+
         <div class="answer_box">
             <p id="answer_text">{{items[chapter_counter-1].answer2}}</p>
             <p v-if="items[chapter_counter-1].point==1" id="answer_text"><ion-icon name="checkmark-outline"></ion-icon></p>
             <p v-if="items[chapter_counter-1].point==0" id="answer_text"><ion-icon name="close-outline"></ion-icon></p>
         </div>
+
         <div class="barra_container">
             <div class="stalker-icon">
                 <img src="@/components/static/img/stalker_icon.png" />
@@ -27,7 +28,6 @@
 </template>
 
 <script>
-
     export default {
         name: 'answer2',
         computed: {
@@ -84,7 +84,9 @@
 </script>
 
 <style scoped>
+
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     * {
         padding: 0;
         margin: 0;
@@ -108,6 +110,7 @@
         margin-right: 8vw;
         color: white;
     }
+
     #answer_text {
         text-align: center;
         margin-bottom: 2vh;
@@ -128,6 +131,7 @@
         color: #00fff0;
         background: transparent;
     }
+
     .barra_container {
         display: flex;
         width: fit-content;
@@ -151,6 +155,7 @@
     .barra_container img {
         background: transparent;
     }
+
     .barra {
         width: 250px;
         height: 16px;
@@ -161,9 +166,9 @@
         color: red;
     }
 
-        .barra div {
-            
+        .barra div {           
             border-radius: 10px;
             border: 8px solid #9f00eb;
         }
+
 </style>

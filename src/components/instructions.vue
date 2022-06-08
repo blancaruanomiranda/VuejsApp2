@@ -13,6 +13,7 @@
             <p>En este juego vas a participar en una historia. A medida que vayas avanzando, deberás tomar varias decisiones que afectarán al protagonista de la historia. En cada capítulo, se te mostrarán dos opciones y deberás hacer click en la que creas que es mejor, así de simple. </p>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -21,13 +22,14 @@
         props: {
             counter: Number,
             chapter_counter: Number
-        },
-        
+        },        
     };
 </script>
 
 <style scoped>
+
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     * {
         padding: 0;
         margin: 0;
@@ -58,4 +60,5 @@
     #last_chapter_text {
         margin-top: 15vh;
     }
+
 </style>

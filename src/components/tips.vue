@@ -1,15 +1,11 @@
 <template>
     <div class="tips">
-
         <p>
             Ahora que ya conoces un poquito más lo que es la huella digital, te dejo por aquí unos consejos para que la cuides y le saques partido:
-
-        </p>
-      
+        </p>     
         <ul class="a">
             <li v-for="item in items" :key="item.message">
                 {{ item.message }}
-
             </li>
         </ul>
     </div>
@@ -38,14 +34,13 @@
 </script>
 
 <style scoped>
+
     * {
         padding: 0;
         margin: 0;
         background-color: black;
         background-size: 100% 100%;
     }
-
-
 
     p {
         font-size: 15px;
@@ -63,16 +58,14 @@
         margin-right: 15vw;
         padding: 20px;
         color: white;
-        padding-bottom: 1px;
-       
+        padding-bottom: 1px;     
     }
+
     ul.a{
         list-style-type: "\1F44D";
         list-style-position: inside;
         color: red;
-        margin-bottom: 5vh;
-        
-    
+        margin-bottom: 5vh;        
     }
    
 </style>

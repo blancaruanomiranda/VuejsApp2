@@ -11,8 +11,6 @@
             <p class="c" v-if="f_counter==1 && points>5">{{items[f_counter-1].message5}}</p>
             <img id="img3" v-if="f_counter==1 && points>5" src="@/components/static/img/f3.jpg" />
             <a v-if="f_counter==3" href="https://docs.google.com/forms/d/e/1FAIpQLSeZHZV_2BNeOzCIPn6C6TEgY_sSGiQjv3mHRwn3qB7iZjS4EA/viewform?usp=sf_link" target="_blank">Link al test</a>
-
-
         </div>
     </div>
 </template>
@@ -33,8 +31,7 @@
                         message2: `Durante el juego has tenido que tomar 6 decisiones, y ${this.points} han sido correctas.`,
                         message3: "¡La próxima vez intenta proteger un poco más a Jimmy!",
                         message4: "¡No lo has hecho nada mal! Se te da bien esto de gestionar las redes sociales.",
-                        message5: "¡Vaya crack! Si algún día Jimmy se hace famoso, seguro que te querrá contratar como manager para que le lleves las redes."
-                      
+                        message5: "¡Vaya crack! Si algún día Jimmy se hace famoso, seguro que te querrá contratar como manager para que le lleves las redes." 
                     },
                     {
                         message1: 'Todo lo que has visto en esta historia son situaciones que tanto tú como yo nos podemos encontrar en nuestro día a día. Estas situaciones son algunos ejemplos de cómo nos puede afectar nuestra huella digital. ',
@@ -46,14 +43,12 @@
                     }
                 ]
             }
-        },
-        
-        
-
+        },            
     };
 </script>
 
 <style scoped>
+
     * {
         padding: 0;
         margin: 0;
@@ -69,16 +64,11 @@
         padding: 20px;
         color: white;
     }
+
     .a{
         margin-top: 12vh;
     }
-    .b{
-       
-    }
-    .c{
-     
-        
-    }
+
     @keyframes opacity {
         0% {
             opacity: 0;
@@ -96,21 +86,24 @@
             opacity: 100;
         }
     }
+
     .opacity_animation {
         animation-name: opacity;
         animation-duration: 7s;
         animation-iteration-count: 1;
     }
+
     #img1{
         display: block;
         margin: auto;
-
     }
+
     #img2 {
         display: block;
         margin: auto;
         width: 15%;
     }
+
     #img3 {
         display: block;
         margin: auto;

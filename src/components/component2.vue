@@ -2,15 +2,10 @@
     
     <div class="component2">
 
-
         <h1>CAPÍTULO {{chapter_counter}}</h1>
-
         <p id="normal" v-if="chapter_counter!=6"> {{items[chapter_counter-1].message1}}</p>
         <p id="normal" v-if="chapter_counter!=6"> {{items[chapter_counter-1].message2}}</p>
-
-
         <component :is="component" v-bind="{ counter: this.counter, chapter_counter: this.chapter_counter }"></component>
-
 
         <div class="image-wrapper" v-if="chapter_counter==1">
             <div class="column">
@@ -20,6 +15,7 @@
                 <img id="imgOPT2" src="@/components/static/img/img1_B.jpg" style="width:50%" />
             </div>
         </div>
+
         <div class="image-wrapper2" v-if="chapter_counter==2">
             <div class="column2">
                 <img id="OPT1-2" src="@/components/static/img/img2_A.jpeg" style="width:50%" />
@@ -28,6 +24,7 @@
                 <img id="OPT2-2" src="@/components/static/img/img2_B.jpeg" style="width:50%" />
             </div>
         </div>
+
         <div class="image-wrapper2" v-if="chapter_counter==3">
             <div class="column2">
                 <img id="OPT1-2" src="@/components/static/img/img3_A.jpg" style="width:50%" />
@@ -36,6 +33,7 @@
                 <img id="OPT2-2" src="@/components/static/img/img3_B.jpg" style="width:50%" />
             </div>
         </div>
+
         <div class="image-wrapper" v-if="chapter_counter==4">
             <div class="column">
                 <img id="imgOPT1" src="@/components/static/img/img4_A.jpeg" style="width:55%" />
@@ -44,6 +42,7 @@
                 <img id="imgOPT2" src="@/components/static/img/img4_B.jpeg" style="width:60%" />
             </div>
         </div>
+
         <div class="image-wrapper2" v-if="chapter_counter==5">
             <div class="column2">
                 <img id="OPT1-2" src="@/components/static/img/img5_A.jpeg" style="width:50%" />
@@ -52,12 +51,13 @@
                 <img id="OPT2-2" src="@/components/static/img/img5_B.jpg" style="width:50%" />
             </div>
         </div>
+
         <div v-if="chapter_counter==6">
             <p id="normal">Justo cuando Jimmy acaba de colgar la foto de sus apuntes, le llega una notificación de un mensaje. La persona que le manda el mensaje no tiene foto de perfil y se llama rodasoca_al_reves. El mensaje dice lo siguiente: <em>"Hola Jimmy!! ¡Cuánto tiempo hermano!  Te acuerdas de mí? Soy David, jugábamos juntos a basket jaja me das tu email y tu número de teléfono para que hablemos y quedemos un día ?”</em></p>
             <p id="normal"> ¿Qué debría hacer Jimy?</p>
         </div>
-        <div class="image-wrapper" v-if="chapter_counter==6">
 
+        <div class="image-wrapper" v-if="chapter_counter==6">
             <div class="column">
                 <p id="textA">Jimmy no tiene ni idea de quién es este tío. Nunca ha jugado a baloncesto con un tal David. Aún así, le pica la curiosidad y le pasa el email y el número para averiguarlo.</p>
 
@@ -65,12 +65,7 @@
             <div class="column">
                 <p id="textB">Jimmy no lo duda ni un segundo y bloquea al usuario. Sabe que nunca ha jugado a baloncesto con ningún David, así que chao. </p>
             </div>
-        </div>
-
-        
-
-
-
+        </div>      
     </div>
 </template>
 
@@ -122,15 +117,18 @@
 </script>
 
 <style scoped>
+
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     *{
         box-sizing:border-box;
         margin:0;
     }
-    .component2{
-       
+
+    .component2{       
         margin:0px;
     }
+
     h1 {
         margin-top: 5vh;
         margin-left: 6vw;
@@ -148,7 +146,6 @@
         color: white;
     }
 
-
     .image-wrapper {
         display: flex;
     }
@@ -158,71 +155,51 @@
         padding: 5px;
         text-align: center;
     }
+
     #imgOPT1{
-        margin-left: 18vw;
-        
+        margin-left: 18vw;        
     }
+
     #imgOPT2 {
-        margin-right: 18vw;
-       
+        margin-right: 18vw;      
     }
+
     .image-wrapper2 {
-        display: flex;
-        
+        display: flex;       
     }
+
     .column2 {
         flex: 50%;
         padding: 5px;
         text-align: center;
     }
+
     #OPT1-2 {
-        margin-left: 18vw;
-        
+        margin-left: 18vw;      
     }
 
     #OPT2-2 {
-        margin-right: 18vw;
-        
-    }
-
-    
+        margin-right: 18vw;        
+    }   
 
     .text-wrapper {
         display: flex;
         justify-content: space-between;
-        margin-inline: 70px;
-        
+        margin-inline: 70px;       
     }
 
     #textA {
         color: #00fff0;
         border: 1px solid white;
         padding: 20px;
-        margin-left: 10vw;
-        
+        margin-left: 10vw;       
     }
+
     #textB {
         color: #00fff0;
         border: 1px solid white;
         padding: 20px;
         margin-right: 10vw;
     }
-    #normal{
-
-    }
-    
-    
-   
-
-    
-
-    
-
-
-
-    
-
-   
-
    
 </style>

@@ -2,13 +2,14 @@
     <div class="answer">
         <meta charset="UTF-8" />
         <h1>CAPÍTULO {{chapter_counter}}</h1>
-
         <p id="text"> {{items[chapter_counter-1].message}}</p>
+
         <div class="answer_box">
             <p id="answer_text">{{items[chapter_counter-1].answer1}}</p>
             <p v-if="items[chapter_counter-1].point==1" id="answer_text"><ion-icon name="checkmark-outline"></ion-icon></p>
             <p v-if="items[chapter_counter-1].point==0" id="answer_text"><ion-icon name="close-outline"></ion-icon></p>
         </div>
+
         <div class="barra_container">
             <div class="stalker-icon">
                 <img src="@/components/static/img/stalker_icon.png"/>
@@ -19,19 +20,13 @@
             <div class="jimmy-icon">
                 <img src="@/components/static/img/timmy_icon.png" />
             </div>
-        </div>
-        
-        
+        </div>  
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     </div>
 </template>
 
 <script>
-    //const progreso = document.querySelector(".barra div")
-    //progreso.setAttribute("style", "width: 60%");
-    
-    export default {
-        
+    export default {     
         name: 'answer',
         computed: {
             barWidthCalculated: function () {
@@ -96,7 +91,9 @@
 </script>
 
 <style scoped>
+
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     * {
         padding: 0;
         margin: 0;
@@ -112,6 +109,7 @@
         padding: 20px;
         font-family: 'Press Start 2P', cursive;
     }
+
     p {
         font-size: 15px;
         margin-left: 7vw;
@@ -125,6 +123,7 @@
         margin-bottom: 2vh;
         color: #00fff0;
     }
+
     .answer_box {
         color: #00fff0;
         padding: 30px;
@@ -134,6 +133,7 @@
         width: 50%;
         margin: 5vh auto;
     }
+
     i {
         color: #00fff0;
         background: transparent;
@@ -148,17 +148,21 @@
         height: 8vh;
         overflow: hidden;
     }
+
     .jimmy-icon {
         transform: scale(0.4);
         background: transparent;
     }
+
     .stalker-icon {
         transform: scale(0.4);
         background: transparent;
     }
+
     .barra_container img {
         background: transparent;
     }
+
     .barra {
         width: 250px;
         height: 16px;
@@ -169,12 +173,9 @@
         color: red;
     }
 
-        .barra div {
-            
+        .barra div {            
             border-radius: 10px;
-            
             border: 8px solid #9f00eb;
         }
-        
-   
+ 
 </style>

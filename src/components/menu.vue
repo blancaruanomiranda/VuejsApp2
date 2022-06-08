@@ -1,5 +1,4 @@
 <template>
-
     <div class="menu">
         <p>MENUUUUU</p>
     </div>
@@ -17,6 +16,7 @@
 </script>
 
 <style scoped>
+
     * {
         padding: 0;
         margin: 0;
@@ -42,4 +42,5 @@
         padding: 20px;
         color: white;
     }
+
 </style>

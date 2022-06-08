@@ -1,21 +1,21 @@
 <template>
 
     <div class="app">
-
-
         <meta charset="UTF-8" />
-
         <component :is="component" v-bind="{ counter: this.counter, chapter_counter: this.chapter_counter, f_counter: this.f_counter, points: this.points, progreso: this.progreso}"></component>
         <button class="start_button" id="empezar" v-if="component == 'Home'" v-on:click="component='instructions'; counter++; chapter_counter++">EMPEZAR </button>
         <button class="start_button" v-if="component == 'Home'" v-on:click="component='final_menu'; counter++"> MENÚ </button>
         <button class="opacity_animation" id="got_button" v-if="component == 'instructions' && chapter_counter==1" v-on:click="component='instructions2'; counter++"> VALE PERO, DE QUÉ VA LA HISTORIA? </button>
         <button class="opacity_animation" id="got_button" v-if="component == 'instructions2'" v-on:click="component='component1'; counter++"> DALE BRO </button>
+        
         <button id="arrow_button" v-if="component == 'component1' && chapter_counter<7" v-on:click="component='component2'; counter++">
             <span class="icono-flecha"><ion-icon name="arrow-forward-outline"></ion-icon> </span>
         </button>
+
         <button id="arrow_button" v-if="component == 'component1' && chapter_counter==7" v-on:click="component='instructions'; counter++">
             <span class="icono-flecha"><ion-icon name="arrow-forward-outline"></ion-icon> </span>
         </button>
+
         <div class="btn-option" v-if="component == 'component2' && chapter_counter<7">
             <div class="button-column">
                 <button @click="sumPoints1" id="OPT1" v-if="component == 'component2' && chapter_counter<7" v-on:click="component='answer'; counter++">OPCIÓN 1 </button>
@@ -24,6 +24,7 @@
                 <button @click="sumPoints2" id="OPT2" v-if="component == 'component2' && chapter_counter<7" v-on:click="component='answer2'; counter++">OPCIÓN 2 </button>
             </div>
         </div>
+
         <button class="corazon" id="got_button" v-if="component == 'instructions' && chapter_counter==7" v-on:click="component='priv'; counter++"> VAMOS A SOLUCIONAR ESTO </button>
 
         <div class="container" v-if="component == 'priv'">
@@ -33,16 +34,19 @@
                 <span class="slider"></span>
             </label>
         </div>
+
         <button id="arrow_button" v-if="component == 'answer' | component == 'answer2' && chapter_counter < 7" v-on:click="component='component1'; counter++; chapter_counter++">
             <span class="icono-flecha"><ion-icon name="arrow-forward-outline"></ion-icon> </span>
         </button>
+
         <button id="arrow_button" v-if="component == 'feedback' && f_counter == 1" v-on:click="component='feedback'; counter++; f_counter++">
             <span class="icono-flecha"><ion-icon name="arrow-forward-outline"></ion-icon> </span>
         </button>
+
         <button id="arrow_button" v-if="component == 'feedback' && f_counter == 2" v-on:click="component='feedback'; counter++; f_counter++">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZHZV_2BNeOzCIPn6C6TEgY_sSGiQjv3mHRwn3qB7iZjS4EA/viewform?usp=sf_link" target="_blank">Link al test</a>
-
         </button>
+
         <button id="got_button" v-if="component == 'feedback' && f_counter == 3" v-on:click="component='final_menu'; counter++"> IR AL MENÚ </button>
         <button id="menu_button" v-if="component == 'final_menu'" v-on:click="component='evaluation'; counter++">EVALUACIÓN</button>
         <button id="menu_button" v-if="component == 'final_menu'" v-on:click="component='tips'; counter++"> CONSEJITOS </button>
@@ -69,7 +73,6 @@
     import evaluation from './components/evaluation.vue';
     import feedback from './components/feedback.vue';
     import priv from './components/private.vue';
-
 
     export default {
         name: 'app',
@@ -126,9 +129,7 @@
                     this.component = 'feedback';
                 }, 1000);
             }
-
         }
-
     };
 </script>
 
@@ -143,17 +144,16 @@
         text-align: justify;
         line-height: 20px;
         overflow-x: hidden;
-        font-family: "Lucida Console", "Courier New", monospace;
-       
-        
+        font-family: "Lucida Console", "Courier New", monospace;             
     }
+
     .app{
         height: 100vh;
     }
+
     h3{
         color: white;
-        background: transparent;
-        
+        background: transparent;       
     }
   
     button {
@@ -176,19 +176,17 @@
             color: black;
             box-shadow: 0 0 5px mediumpurple, 0 0 25px mediumpurple, 0 0 50px mediumpurple, 0 0 100px mediumpurple;
         }
-
    
-
     #got_button {
         display: block;
-        margin: auto;
-  
+        margin: auto; 
     }
   
     #next_button {
         display: block;
         margin: auto;
     }
+
     @keyframes opacity {
         0% {opacity: 0;}
         50% {
@@ -201,13 +199,13 @@
             opacity: 100;
         }
     }
+
     .opacity_animation {
         animation-name: opacity;
         animation-duration: 5s;
         animation-iteration-count: 1;
     }
-    
-    
+       
     #menu_button {
         display: block;
         margin: auto;
@@ -215,6 +213,7 @@
         width: 190px;
         text-align: center;
     }
+
     .start_button {
         display: block;
         margin: auto;
@@ -222,19 +221,17 @@
         width: 140px;
         text-align: center;
     }
+
     #empezar{
         margin-top: 15vh;
-    }
-    
-    
+    }     
        
     #arrow_button {
         display: block;
         margin: auto;
         margin-top: 5vh;
         border: 1px solid mediumpurple;
-        width: 120px;
-       
+        width: 120px;       
     }
         #arrow_button:hover {
             background-color: transparent;
@@ -242,6 +239,7 @@
             color: mediumpurple;
             box-shadow: 0 0 5px mediumpurple, 0 0 25px mediumpurple, 0 0 50px mediumpurple, 0 0 100px mediumpurple;
         }
+
     .icono-flecha {
         display: block;
         text-align: center;
@@ -250,12 +248,9 @@
         background: transparent;
         font-size: 22px;
         color: mediumpurple;
-
     }
-        .icono-flecha:hover {
-            
-            background-color: transparent;
-            
+        .icono-flecha:hover {          
+            background-color: transparent;          
             color: mediumpurple;
             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
         }
@@ -267,8 +262,6 @@
         margin: auto;
     }
 
-
-
     .btn-option {
         display: flex;
         height: 15vh;
@@ -279,11 +272,12 @@
         padding: 5px;
         text-align: center;
     }
+
     .btn-option #OPT1 {
         margin-left: 18vw;
-        margin-top: 2vh;
-        
+        margin-top: 2vh;       
     }
+
     #OPT1:hover, #OPT2:hover {
         background: mediumpurple;
         color: black;
@@ -326,6 +320,7 @@
         background: transparent;
         align-items: center;
     }
+
     .switch{
         position: relative;
         display: inline-block;
@@ -334,6 +329,7 @@
         margin: 0 10px;
         background: transparent;
     }
+
     .slider{
         position: absolute;
         cursor: pointer;
@@ -346,6 +342,7 @@
         border-radius: 34px;
         border: 1px solid mediumpurple;
     }
+
     .switch input{display:none}
 
     .slider:before{
@@ -359,18 +356,14 @@
         transition: .4s;
         border-radius: 50px;
     }
+
     input:checked + .slider{
         background: mediumpurple;
     }
+
     input:checked + .slider:before {
         transform: translateX(50px);
-    }
-
-
-  
-    
-    
-                
+    }              
                 
 </style>
 
